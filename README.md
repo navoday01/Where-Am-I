@@ -94,12 +94,12 @@ roslaunch robot_world amcl.launch
 
 To navigate the robot in the environment 
 
-..* There are two options to control the robot while it localize itself here:
-...* Send navigation goal via RViz
-.... It can be done by sending a `2D Nav Goal` from RViz. The `move_base` will try to navigate the robot based on the localization. Based on the new observation and the odometry, the robot will further perform the localization. Click the `2D Nav Goal` button in the toolbar, then click and drag on the map to send the goal to the robot. It will start moving and localize itself in the process. If you would like to give amcl node a nudge, you could give the robot an initial position estimate on the map using `2D Pose Estimate`.
+There are two options to control the robot while it localize itself here:
+* Send navigation goal via RViz
+    * It can be done by sending a `2D Nav Goal` from RViz. The `move_base` will try to navigate the robot based on the localization. Based on the new observation and the odometry, the robot will further perform the localization. Click the `2D Nav Goal` button in the toolbar, then click and drag on the map to send the goal to the robot. It will start moving and localize itself in the process. If you would like to give amcl node a nudge, you could give the robot an initial position estimate on the map using `2D Pose Estimate`.
 
-...* Send move command via `teleop` package.
+* Send move command via `teleop` package.
 ```
-.... rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
