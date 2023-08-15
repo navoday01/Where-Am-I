@@ -69,37 +69,37 @@ In this project ROS AMCL package was utilized to localize a mobile robot inside 
 To run the above project, clone the repository in catkin_ws/src/ 
 
 ```
-$ cd /home/{name_of_your_workspace}/catkin_ws/src/
-$ git clone https://github.com/navoday01/Where-Am-I
+cd /home/{name_of_your_workspace}/catkin_ws/src/
+git clone https://github.com/navoday01/Where-Am-I
 ```
 
 Now build and source the project in catkin_ws
 ```
-$ cd /home/{name_of_your_workspace}/catkin_ws/
-$ catkin_make
-$ source devel/setup.bash
+cd /home/{name_of_your_workspace}/catkin_ws/
+catkin_make
+source devel/setup.bash
 ```
 
 Launch robot_world package
 ```
-$ roslaunch robot_world smallworld.launch
+roslaunch robot_world smallworld.launch
 ```
 
 Launch amcl package in another terminal
 ```
-$ cd /home/{name_of_your_workspace}/catkin_ws/
-$ source devel/setup.bash
-$ roslaunch robot_world amcl.launch
+cd /home/{name_of_your_workspace}/catkin_ws/
+source devel/setup.bash
+roslaunch robot_world amcl.launch
 ```
 
 To navigate the robot in the environment 
 
-..*There are two options to control the robot while it localize itself here:
-...*Send navigation goal via RViz
-....It can be done by sending a `2D Nav Goal` from RViz. The `move_base` will try to navigate the robot based on the localization. Based on the new observation and the odometry, the robot will further perform the localization. Click the `2D Nav Goal` button in the toolbar, then click and drag on the map to send the goal to the robot. It will start moving and localize itself in the process. If you would like to give amcl node a nudge, you could give the robot an initial position estimate on the map using `2D Pose Estimate`.
+..* There are two options to control the robot while it localize itself here:
+...* Send navigation goal via RViz
+.... It can be done by sending a `2D Nav Goal` from RViz. The `move_base` will try to navigate the robot based on the localization. Based on the new observation and the odometry, the robot will further perform the localization. Click the `2D Nav Goal` button in the toolbar, then click and drag on the map to send the goal to the robot. It will start moving and localize itself in the process. If you would like to give amcl node a nudge, you could give the robot an initial position estimate on the map using `2D Pose Estimate`.
 
-...*Send move command via `teleop` package.
+...* Send move command via `teleop` package.
 ```
-....$ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+.... rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
