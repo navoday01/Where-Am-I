@@ -1,4 +1,4 @@
-# Where-Am-I
+# Where Am I?
 
 In this project ROS AMCL package was utilized to localize a mobile robot inside a map in the Gazebo simulation environments.
 
